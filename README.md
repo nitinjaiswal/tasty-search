@@ -7,6 +7,14 @@
 3. run ``` bin/dev_start.sh ``` for local enviroment
 4. run ``` bin/start.sh ``` for production enviroment 
 
+## API
+Method : GET
+URL : http://ec2-3-90-21-183.compute-1.amazonaws.com/v1/gourmet/gourmet/tastySearch
+Authentication : No authentication
+PARAMS : query
+Example : http://ec2-3-90-21-183.compute-1.amazonaws.com/v1/gourmet/gourmet/tastySearch?query=cat,processed,bad,good
+
+
 ## Live Demo
 Live demo is deployed on aws. [Click here](http://ec2-3-90-21-183.compute-1.amazonaws.com)
 
