@@ -8,11 +8,11 @@
 4. run ``` bin/start.sh ``` for production enviroment 
 
 ## API
-Method : GET
-URL : http://ec2-3-90-21-183.compute-1.amazonaws.com/v1/gourmet/gourmet/tastySearch
-Authentication : No authentication
-PARAMS : query
-Example : http://ec2-3-90-21-183.compute-1.amazonaws.com/v1/gourmet/gourmet/tastySearch?query=cat,processed,bad,good
+1. Method : GET
+2. URL : http://ec2-3-90-21-183.compute-1.amazonaws.com/v1/gourmet/gourmet/tastySearch
+3. Authentication : No authentication
+4. PARAMS : query
+5. Example : http://ec2-3-90-21-183.compute-1.amazonaws.com/v1/gourmet/gourmet/tastySearch?query=cat,processed,bad,good
 
 
 ## Live Demo
