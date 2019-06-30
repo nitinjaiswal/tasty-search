@@ -10,7 +10,7 @@ var config = {
   http: {
     defaultApi: 'http://localhost:3000/',
     basePath: 'http://localhost:3000'
-  }
+  },
   constants: {
     production: false
   },
