@@ -25,7 +25,6 @@ app.use(function (req, res, next) {
 
 app.get('/', function(req,res,next){
   try {
-    console.log('---req.query--',req.query)
     if (! _.isEmpty(req.query) && req.query.token.length > 0) {
       if (_.isUndefined(req.query.token)){
         throw new Error('something not right')
@@ -34,7 +33,7 @@ app.get('/', function(req,res,next){
         req.query.token = req.query.token.toLowerCase()
       }
       var options = { method: 'GET',
-        url: 'http://localhost:3008/v1/gourmet/gourmet/tastySearch',
+        url: 'http://localhost:3000/v1/gourmet/gourmet/tastySearch',
         qs: { query: req.query.token },
       };
       request(options, function (error, response, body) {
