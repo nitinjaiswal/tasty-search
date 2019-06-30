@@ -10,6 +10,6 @@
 ## Live Demo
 Live demo is deployed on aws. [Click here](http://ec2-3-90-21-183.compute-1.amazonaws.com)
 
-Sample input : cat, processed, bad, good
+Sample input : cat,processed,bad,good
 
 Sample Response : [Click here](http://ec2-3-90-21-183.compute-1.amazonaws.com/v1/gourmet/gourmet/tastySearch?query=cat,processed,bad,good)
