@@ -17,6 +17,10 @@ var config = {
   layers: {
     RESOURCES : 1,
     CONTROLLER : 2
+  },
+  logLevel: {
+    RESOURCES : 1,
+    CONTROLLER : 2
   }
 }
 
