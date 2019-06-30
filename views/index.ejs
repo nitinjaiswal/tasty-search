@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tasty Search</title>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="search.css" rel="stylesheet">
+	<style type="text/css">
+		.isa_info, .isa_success, .isa_warning, .isa_error {
+			margin: 10px 0px;
+			padding:12px;
+			 
+			}
+			.isa_info {
+			    color: #00529B;
+			    background-color: #BDE5F8;
+			}
+			.isa_success {
+			    color: #4F8A10;
+			    background-color: #DFF2BF;
+			}
+			.isa_warning {
+			    color: #9F6000;
+			    background-color: #FEEFB3;
+			}
+			.isa_error {
+			    color: #D8000C;
+			    background-color: #FFD2D2;
+			}
+			.isa_info i, .isa_success i, .isa_warning i, .isa_error i {
+			    margin:10px 22px;
+			    font-size:2em;
+			    vertical-align:middle;
+			}
+	</style>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+</head>
+<body>
+	<div>
+		
+		<div class="container">
+		 <br/>
+		 <div class="row justify-content-center">
+		    <div class="col-12 col-md-10 col-lg-8">
+		       <form class="card card-sm" action="/" method="get" >
+		          <div class="card-body row no-gutters align-items-center">
+		             <div class="col-auto">
+		                <i class="fas fa-search h4 text-body"></i>
+		             </div>
+
+		             <div class="col">
+		                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search comma seperated tokens " name = 'token' <% if (query) { %> value = <%= query %> <% } %>  />
+		             </div>
+
+		             <div class="col-auto">
+		                <button class="btn btn-lg btn-success" type="submit">Search</button>
+		             </div>
+
+		          </div>
+		       </form>
+
+	    </div>
+		    <!--end of col-->
+		 </div>
+		</div>
+
+		<% if (error) { %>
+			<div class="isa_error">
+			   <i class="fa fa-times-circle"></i>
+			   <%= error %>
+			</div>
+		<% } %>
+
+		<br/>
+		<br/>
+		<div>
+			<ul class="list-group">
+				<% for(var i = 0 ; i < data.length ; i++ ) { %>
+				<li class="list-group-item"> <% Object.keys(data[i]).forEach(function(key){ %>
+					<p><span><%= key %></span><span> : <%= data[i][key] %> </span></p>
+				<% }) %> 
+				</li>
+				<% } %>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+

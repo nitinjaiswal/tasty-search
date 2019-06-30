@@ -1,0 +1,11 @@
+node_modules
+storage
+logs
+dump.rdb
+.sequelizerc
+.idea/
+node_api.iml
+.DS_Store
+*/.DS_Store
+*.pyc
+
