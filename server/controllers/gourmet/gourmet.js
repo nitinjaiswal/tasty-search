@@ -24,19 +24,21 @@ module.exports = {
       var mainArr =[]
       var obj = {}
       query.forEach(function(item){
-        console.log('--item-',item, charIndex[item], charIndex['Hi'])
-        charIndex[item].forEach(function(i){
-          if (_.isUndefined(obj[i])){
-            obj[i] = {
-              score : 1,
-              reviewScore : foodReviews[i]['review/score'],
-              docID : i
+        if (!_.isUndefined(charIndex[item])){
+          charIndex[item].forEach(function(i){
+            if (_.isUndefined(obj[i])){
+              obj[i] = {
+                score : 1,
+                reviewScore : foodReviews[i]['review/score'],
+                docID : i
+              }
             }
-          }
-          else {
-            obj[i].score += 1
-          }
-        })
+            else {
+              obj[i].score += 1
+            }
+          })
+        }
+        
       })
       Object.keys(obj).forEach(function(key){
         mainArr.push(obj[key])
@@ -46,7 +48,6 @@ module.exports = {
       actualData.slice(0,20).forEach(function(item){
         result.push(foodReviews[item.docID])
       })
-
       req.data = result
       next();
       return ;
@@ -69,7 +70,7 @@ module.exports = {
       // })
 
     }catch(error){
-      console.log(error.message)
+      console.log('--Error--',error.message)
       display = 'Problem in getting List';
       req.error = error;
       utils.errorFunctionNew(layer, logLevel, error, display, req, res);

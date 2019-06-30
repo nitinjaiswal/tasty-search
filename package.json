@@ -1,14 +1,14 @@
 {
-  "name": "farmGuide.in",
+  "name": "gourmet",
   "version": "0.0.1",
-  "description": "farmGuide ReST API",
+  "description": "gourmet ReST API",
   "scripts": {
     "test": "mocha server/test/init.js --timeout 1000000"
   },
   "apps": [
     "api"
   ],
-  "author": "Deepak Sharma",
+  "author": "nitin",
   "license": "Private",
   "dependencies": {
     "@slack/client": "^3.10.0",

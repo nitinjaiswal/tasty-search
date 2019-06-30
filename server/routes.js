@@ -39,8 +39,16 @@ app.get('/', function(req,res,next){
       request(options, function (error, response, body) {
         if (error) throw new Error(error);
         let data2 = JSON.parse(body).data
-
-        res.render('index',{data: data2, query: req.query.token, error: false})
+        if (_.isEmpty(data2)){
+          let error = 'No document find for given token'
+          res.render('index',{data: [], query: false, error: error})
+        }
+        else{
+          let val = req.query.token.split(',').map(function(i){
+            return i.trim()
+          }).join(',')
+          res.render('index',{data: data2, query: val, error: false})  
+        }
       });
        
     } 
