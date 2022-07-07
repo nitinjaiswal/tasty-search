@@ -47,7 +47,7 @@
     "md5": "^2.1.0",
     "metalogger": "^1.0.1",
     "method-override": "^2.3.2",
-    "moment": "^2.15.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.21",
     "mongoose": "^4.5.10",
     "multer": "^0.1.8",
