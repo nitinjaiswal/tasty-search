@@ -48,7 +48,7 @@
     "metalogger": "^1.0.1",
     "method-override": "^2.3.2",
     "moment": "^2.15.0",
-    "moment-timezone": "^0.5.21",
+    "moment-timezone": "^0.5.35",
     "mongoose": "^4.5.10",
     "multer": "^0.1.8",
     "musicmetadata": "~2.0.2",
